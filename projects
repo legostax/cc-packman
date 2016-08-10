@@ -1,0 +1,54 @@
+name = wclear
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/wclear.lua
+        filename = wclear
+    category = command
+    dependencies = none
+    version = 1.0
+    size = 645
+end
+name = cclear
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/cclear.lua
+        filename = cclear
+    category = command
+    dependencies = none
+    version = 1.0
+    size = 1165
+end
+name = gset
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/gset.lua
+        filename = gset
+    category = utility
+    dependencies = none
+    version = 1.0
+    size = 7801
+end
+name = rednet-snooper
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/rsnoop.lua
+        filename = rsnoop
+    category = utility
+    dependencies = none
+    version = 1.0
+    size = 7501
+end
+name = ccwiki
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/ccwiki.lua
+        filename = ccwiki
+    category = utility
+    dependencies = none
+    version = 1.0
+    size = 8392
+end
+name = peripheral-manager
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/ccpmang/master/pmang.lua
+        filename = pmang
+    category = utility
+    dependencies = none
+    version = 1.0
+    size = 71721
+end
