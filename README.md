@@ -1,7 +1,16 @@
 # cc-packman
 My CC programs prepared for the Packman package manager.
 
-Note to self:
+# Will include:
+
+- WClear
+- CClear
+- Rednet Snooper
+- CCWiki
+- GSet
+- Peripheral Manager
+
+# Note to self:
 
 [Lyqyd's repo](https://github.com/lyqyd/cc-packman)
 
