@@ -40,7 +40,7 @@ name = ccwiki
         filename = ccwiki
     category = utility
     dependencies = none
-    version = 1.0
+    version = 1.1
     size = 8392
 end
 name = peripheral-manager
