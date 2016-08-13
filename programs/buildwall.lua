@@ -89,12 +89,15 @@ local function getBlockName(data)
 end
 
 local function placeBlock(side)
-    for i = 1,15 do
+    for i = 1,16 do
         if turtle.getItemCount(i) > 0 then
             if turtle.getSelectedSlot() ~= i then
                 turtle.select(i)
+                if getBlockName(turtle.getItemDetail()) == blockType then break
+                else
+                    turtle.drop()
+                end
             end
-            break
         end
     end
     if side == "up" then
