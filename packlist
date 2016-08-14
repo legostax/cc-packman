@@ -1,10 +1,28 @@
+name = turtle-mine
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/mine.lua
+        filename = mine
+    category = turtle
+    dependencies = none
+    version = 0.1
+    size = 1000
+end
+name = turtle-farm
+    type = raw
+        url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/farm.lua
+        filename = farm
+    category = turtle
+    dependencies = none
+    version = 0.1
+    size = 1000
+end
 name = buildwall
     type = raw
         url = https://raw.githubusercontent.com/legostax/cc-packman/master/programs/buildwall.lua
         filename = buildwall
     category = turtle
     dependencies = none
-    version = 0.1
+    version = 0.2
     size = 1000
 end
 name = wclear
