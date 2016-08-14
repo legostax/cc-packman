@@ -75,17 +75,23 @@ local function getBlockName(data)
 end
 
 local function dig()
+    print("called dig()")
     local b,d = turtle.inspect()
     oldDig()
-    if getBlockName(d) == "gravel" or getBlockName(d) == "sand" then
-        sleep(1)
+    if b then
+        if getBlockName(d) == "gravel" or getBlockName(d) == "sand" then
+            sleep(1)
+        end
     end
 end
 local function digUp()
+    print("called digUp()")
     local b,d = turtle.inspectUp()
     oldDigUp()
-    if getBlockname(d) == "gravel" or getBlockName(d) == "sand" then
-        sleep(1)
+    if b then
+        if getBlockname(d) == "gravel" or getBlockName(d) == "sand" then
+            sleep(1)
+        end
     end
 end
 
