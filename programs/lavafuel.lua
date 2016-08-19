@@ -9,6 +9,7 @@ else
     local fd = turtle.forward
     local bk = turtle.back
     local pl = turtle.placeDown
+    local rf = turtle.refuel
 
     for i = 1,spaces do
         fd()
@@ -16,6 +17,7 @@ else
     for i = 1,buckets do
         pl()
         fd()
+        rf()
     end
     for i = 1,buckets do
         bk()
