@@ -64,7 +64,8 @@ end
 
 local function init()
     if fs.exists(pLastHarvest) then
-        nLastHarvest = tonumber(readFile(pLastHarvest))
+        d = readFile(pLastHarvest)
+        nLastHarvest = tonumber(d:sub(1,string.find(d,"\n")))
         print("Last harvest on: "..tostring(nLastHarvest))
         nNextHarvest = nLastHarvest+3
         print("Next harvest on: "..tostring(nNextHarvest))
