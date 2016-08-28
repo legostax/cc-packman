@@ -180,6 +180,7 @@ local function statusUpdate()
         local e = {os.pullEvent("timer")}
         if e[2] == timeofdayTimer then
             timeofdayTimer = os.startTimer(0.8)
+            draw()
         end
     end
 end
@@ -194,7 +195,7 @@ local function main()
                 harvestCane()
                 returnItems()
                 nLastHarvest = nNextHarvest
-                writeFile(pNextHarvest, nLastHarvest+3)
+                writeFile(pNextHarvest, tostring(nLastHarvest+3))
                 status = "Waiting..."
                 timeout = os.startTimer(300)
             else
