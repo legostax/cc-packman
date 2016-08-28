@@ -153,7 +153,7 @@ end
 local function init()
     if fs.exists(pLastHarvest) then
         local d = readFile(pLastHarvest)
-        nLastHarvest = tonumber(d:sub(1,string.find(d,"\n")-1))
+        nLastHarvest = tonumber(d)
         print("Last harvest on: "..tostring(nLastHarvest))
         nNextHarvest = nLastHarvest+daywait
         print("Next harvest on: "..tostring(nNextHarvest))
