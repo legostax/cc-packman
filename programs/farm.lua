@@ -3,6 +3,7 @@ local nFarmWidth = 12
 local nFarmLength = 8
 local nSugarWidth = 12
 local nSugarLength = 5
+local daywait = 3
 local nLastHarvest = 1 -- stores last day of harvest
 local nNextHarvest = 0 -- stores predicted day of harvest
 local pLastHarvest = "lastharvest.txt" -- last day of harvest saved to file
@@ -153,10 +154,12 @@ local function init()
         local d = readFile(pLastHarvest)
         nLastHarvest = tonumber(d:sub(1,string.find(d,"\n")))
         print("Last harvest on: "..tostring(nLastHarvest))
-        nNextHarvest = nLastHarvest+3
+        nNextHarvest = nLastHarvest+daywait
         print("Next harvest on: "..tostring(nNextHarvest))
     else
         print("Last harvest unknown")
+        nLastHarvest = os.day()
+        nNextHarvest = nLastHarvest+daywait
     end
 end
 
@@ -195,7 +198,7 @@ local function main()
                 harvestCane()
                 returnItems()
                 nLastHarvest = nNextHarvest
-                writeFile(pNextHarvest, tostring(nLastHarvest+3))
+                writeFile(pNextHarvest, tostring(nLastHarvest+daywait))
                 status = "Waiting..."
                 timeout = os.startTimer(300)
             else
