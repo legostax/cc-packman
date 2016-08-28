@@ -1,3 +1,4 @@
+--v0.3
 --vars
 local nFarmWidth = 12
 local nFarmLength = 8
@@ -160,6 +161,7 @@ local function init()
         print("Last harvest unknown")
         nLastHarvest = os.day()
         nNextHarvest = nLastHarvest+daywait
+        writeFile(pLastHarvest,tostring(nLastHarvest))
     end
 end
 
@@ -197,8 +199,9 @@ local function main()
                 harvestWheat()
                 harvestCane()
                 returnItems()
-                nLastHarvest = nNextHarvest
-                writeFile(pNextHarvest, tostring(nLastHarvest+daywait))
+                nLastHarvest = tonumber(os.day())
+                nNextHarvest = nNextHarvest+daywait
+                writeFile(pLastHarvest, tostring(nLastHarvest))
                 status = "Waiting..."
                 timeout = os.startTimer(300)
             else
